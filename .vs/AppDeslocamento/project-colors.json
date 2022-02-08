@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1069701a-215d-4d39-a7c2-65164729ebc9": {
+      "ProjectGuid": "1069701a-215d-4d39-a7c2-65164729ebc9",
+      "DisplayName": "AppDeslocamento.Data",
+      "ColorIndex": 0
+    },
+    "fad03f02-f59b-46f1-9847-d4c36da83782": {
+      "ProjectGuid": "fad03f02-f59b-46f1-9847-d4c36da83782",
+      "DisplayName": "AppDeslocamento.Application",
+      "ColorIndex": 1
+    },
+    "101e4049-808d-4e46-8a4e-a18c8e511708": {
+      "ProjectGuid": "101e4049-808d-4e46-8a4e-a18c8e511708",
+      "DisplayName": "AppDeslocamento.Domain",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
