@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\lucas.matras\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Alunos\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas.matras\\Documents\\Biopark\\C#\\ASPNET\\Nova pasta\\LLLDeslocamento\\AppDeslocamento.Application\\AppDeslocamento.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Alunos\\Documents\\C#\\LLLDeslocamento\\AppDeslocamento.Application\\AppDeslocamento.Application.csproj",
       "projectName": "AppDeslocamento.Application",
-      "projectPath": "C:\\Users\\lucas.matras\\Documents\\Biopark\\C#\\ASPNET\\Nova pasta\\LLLDeslocamento\\AppDeslocamento.Application\\AppDeslocamento.Application.csproj",
-      "packagesPath": "C:\\Users\\lucas.matras\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas.matras\\Documents\\Biopark\\C#\\ASPNET\\Nova pasta\\LLLDeslocamento\\AppDeslocamento.Application\\obj\\",
+      "projectPath": "C:\\Users\\Alunos\\Documents\\C#\\LLLDeslocamento\\AppDeslocamento.Application\\AppDeslocamento.Application.csproj",
+      "packagesPath": "C:\\Users\\Alunos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alunos\\Documents\\C#\\LLLDeslocamento\\AppDeslocamento.Application\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lucas.matras\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Alunos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

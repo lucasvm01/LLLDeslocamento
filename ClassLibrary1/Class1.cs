@@ -1,4 +1,4 @@
-﻿namespace AppDeslocamento.Domain
+﻿namespace ClassLibrary1
 {
     public class Class1
     {

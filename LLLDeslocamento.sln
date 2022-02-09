@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{7FFCA459-E0EF-417D-B20E-A7661EE9A74E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDeslocamento.Data", "AppDeslocamento.Data\AppDeslocamento.Data.csproj", "{1069701A-215D-4D39-A7C2-65164729EBC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDeslocamento.Data", "AppDeslocamento.Data\AppDeslocamento.Data.csproj", "{1069701A-215D-4D39-A7C2-65164729EBC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDeslocamento.Application", "AppDeslocamento.Application\AppDeslocamento.Application.csproj", "{FAD03F02-F59B-46F1-9847-D4C36DA83782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDeslocamento.Application", "AppDeslocamento.Application\AppDeslocamento.Application.csproj", "{FAD03F02-F59B-46F1-9847-D4C36DA83782}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDeslocamento.Domain", "AppDeslocamento.Domain\AppDeslocamento.Domain.csproj", "{101E4049-808D-4E46-8A4E-A18C8E511708}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDeslocamento.Domain", "AppDeslocamento.Domain\AppDeslocamento.Domain.csproj", "{101E4049-808D-4E46-8A4E-A18C8E511708}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDeslocamento.WebAPI", "AppDeslocamento.WebAPI\AppDeslocamento.WebAPI.csproj", "{05E93EFD-F3DC-4D6D-8B1E-AFBB3B3C5BB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDeslocamento.WebAPI", "AppDeslocamento.WebAPI\AppDeslocamento.WebAPI.csproj", "{05E93EFD-F3DC-4D6D-8B1E-AFBB3B3C5BB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
