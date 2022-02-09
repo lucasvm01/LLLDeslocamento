@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "sIgW3E/Tom8WOzP7aDanEWz6wYW9fYWTCiMrmYFvhqLpe3pJiiqWWun5Kk+4pAyP5x0REJUavmlRYjSekwY6rQ==",
+  "dgSpecHash": "sb3ExKVrJIjzWwOXYU5og4pqK1eYmJIue4VEuPvnvJjAVqh3fmh8QM/owen3zZ+0cQbxhKn51yV60fl9m+Is5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alunos\\Documents\\C#\\LLLDeslocamento\\AppDeslocamento.Application\\AppDeslocamento.Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\lucas.matras\\Documents\\Biopark\\C#\\ASPNET\\AppDeslocamento\\AppDeslocamento.Application\\AppDeslocamento.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lucas.matras\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\lucas.matras\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.6\\fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",
+    "C:\\Users\\lucas.matras\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.6\\fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
+    "C:\\Users\\lucas.matras\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\lucas.matras\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\lucas.matras\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

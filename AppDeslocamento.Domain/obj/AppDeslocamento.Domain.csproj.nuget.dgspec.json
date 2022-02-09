@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alunos\\Documents\\C#\\LLLDeslocamento\\AppDeslocamento.Domain\\AppDeslocamento.Domain.csproj": {}
+    "C:\\Users\\lucas.matras\\Documents\\Biopark\\C#\\ASPNET\\AppDeslocamento\\AppDeslocamento.Domain\\AppDeslocamento.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alunos\\Documents\\C#\\LLLDeslocamento\\AppDeslocamento.Domain\\AppDeslocamento.Domain.csproj": {
+    "C:\\Users\\lucas.matras\\Documents\\Biopark\\C#\\ASPNET\\AppDeslocamento\\AppDeslocamento.Domain\\AppDeslocamento.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alunos\\Documents\\C#\\LLLDeslocamento\\AppDeslocamento.Domain\\AppDeslocamento.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\lucas.matras\\Documents\\Biopark\\C#\\ASPNET\\AppDeslocamento\\AppDeslocamento.Domain\\AppDeslocamento.Domain.csproj",
         "projectName": "AppDeslocamento.Domain",
-        "projectPath": "C:\\Users\\Alunos\\Documents\\C#\\LLLDeslocamento\\AppDeslocamento.Domain\\AppDeslocamento.Domain.csproj",
-        "packagesPath": "C:\\Users\\Alunos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alunos\\Documents\\C#\\LLLDeslocamento\\AppDeslocamento.Domain\\obj\\",
+        "projectPath": "C:\\Users\\lucas.matras\\Documents\\Biopark\\C#\\ASPNET\\AppDeslocamento\\AppDeslocamento.Domain\\AppDeslocamento.Domain.csproj",
+        "packagesPath": "C:\\Users\\lucas.matras\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas.matras\\Documents\\Biopark\\C#\\ASPNET\\AppDeslocamento\\AppDeslocamento.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Alunos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lucas.matras\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +43,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.3.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
