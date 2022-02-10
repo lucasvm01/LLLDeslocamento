@@ -27,13 +27,16 @@ namespace AppDeslocamento.WebAPI
                     b => b.MigrationsAssembly("AppDeslocamento.Data"));
             });
 
-            //builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
-            // var appAssembly = typeof(AppDeslocamento.Application.).Assembly;
-            // builder.Services.AddMediatR(appAssemblie);
-            //builder.Services.AddControllersWithViews()
-            //    .AddNewtonsoftJson(options =>
-            //    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-            //);
+            builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            var appAssembly = typeof(AppDeslocamento.Application.Clientes.CadastrarClienteCommand).Assembly;
+             
+            builder.Services.AddMediatR(appAssembly);
+
+            builder.Services.AddControllersWithViews()
+                .AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
 
             var app = builder.Build();
 

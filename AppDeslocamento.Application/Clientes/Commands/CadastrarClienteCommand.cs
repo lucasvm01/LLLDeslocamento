@@ -5,7 +5,7 @@ using MediatR;
 
 namespace AppDeslocamento.Application.Clientes
 {
-    internal class CadastrarClienteCommand : IRequest<Cliente>
+    public class CadastrarClienteCommand : IRequest<Cliente>
     {
         public string nome { get; set; }
         public string cpf { get; set; }
@@ -19,9 +19,17 @@ namespace AppDeslocamento.Application.Clientes
         {
             _unitOfWork = unitOfWork;
         }
-        public Task<Cliente> Handle(CadastrarClienteCommand request, CancellationToken cancellationToken)
+        public async Task<Cliente> Handle(CadastrarClienteCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var clienteInsert = new Cliente(request.nome, request.cpf);
+
+            var repositoryCliente = _unitOfWork.GetRepository<Cliente>();
+    
+            repositoryCliente.Add(clienteInsert);
+
+            await _unitOfWork.CommitAsync();
+
+            return clienteInsert;
         }
     }
 }
