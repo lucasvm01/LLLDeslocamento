@@ -29,23 +29,26 @@ namespace AppDeslocamento.Data.Mapping
 
             builder.Property(p => p.dataHoraInicio)
                 .IsRequired()
-                .HasColumnName("data_hora_inicio")
+                .HasColumnName("dataHoraInicio")
                 .HasColumnType("datetime");
 
             builder.Property(p => p.kmInicio)
                 .IsRequired()
-                .HasColumnName("km_inicio");
+                .HasColumnName("kmInicio");
 
             builder.Property(p => p.observacao)
+                        .HasDefaultValue(null)
                 .HasColumnName("observacao")
                 .HasMaxLength(300);
 
             builder.Property(p => p.dataHoraFim)
-                .HasColumnName("data_hora_fim")
+                .HasDefaultValue(null)
+                .HasColumnName("dataHoraFim")
                 .HasColumnType("datetime");
 
             builder.Property(p => p.kmFim)
-                .HasColumnName("km_fim");
+                .HasDefaultValue(null)
+                .HasColumnName("kmFim");
         }
     }
 }

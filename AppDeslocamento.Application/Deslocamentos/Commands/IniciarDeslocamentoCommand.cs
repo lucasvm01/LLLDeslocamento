@@ -11,7 +11,6 @@ namespace AppDeslocamento.Application.Deslocamentos.Commands
         public long veiculoId { get; set; }
 
         public long kmInicio { get; set; }
-        public DateTime dataHoraInicio { get; set; }
     }
 
     public class IniciarDeslocamentoCommandHandler : IRequestHandler<IniciarDeslocamentoCommand, Deslocamento>
@@ -28,7 +27,7 @@ namespace AppDeslocamento.Application.Deslocamentos.Commands
             var deslocamentoInsert = new Deslocamento(request.clienteId,
                                                         request.condutorId,
                                                         request.veiculoId,
-                                                        request.dataHoraInicio,
+                                                        DateTime.Now,
                                                         request.kmInicio);
 
             var repositoryDeslocamento= _unitOfWork.GetRepository<Deslocamento>();

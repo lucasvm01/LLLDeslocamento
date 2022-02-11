@@ -5,18 +5,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AppDeslocamento.Application.Condutores.Queries
 {
-    public class GetCondutorQuery : IRequest<List<Condutor>>
+    public class GetCondutoresQuery : IRequest<List<Condutor>>
     {
     }
 
-    public class GetCondutorQueryHandler : IRequestHandler<GetCondutorQuery, List<Condutor>>
+    public class GetCondutorQueryHandler : IRequestHandler<GetCondutoresQuery, List<Condutor>>
     {
         private readonly IUnitOfWork _unitOfWork;
         public GetCondutorQueryHandler(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<List<Condutor>> Handle(GetCondutorQuery request, CancellationToken cancellationToken)
+        public async Task<List<Condutor>> Handle(GetCondutoresQuery request, CancellationToken cancellationToken)
         {
             var repositoryCondutor =
                 _unitOfWork.GetRepository<Condutor>();

@@ -20,6 +20,14 @@ namespace AppDeslocamento.Domain.Entities
         {
 
         }
+
+        public void FinalizarDeslocamento(DateTime dataHoraFim, long kmFim, string observacao)
+        {
+            this.dataHoraFim = dataHoraFim;
+            this.kmFim = kmFim;
+            this.observacao = observacao;
+        }
+
         public long clienteId { get; set; }
         public long condutorId { get; set; }
         public long veiculoId { get; set; }

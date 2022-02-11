@@ -7,7 +7,7 @@ namespace AppDeslocamento.WebAPI.Controllers
     public class CondutoresController : ApiController
     {
         [HttpGet]
-        public async Task<IActionResult> GetAsync([FromQuery] GetCondutorQuery query)
+        public async Task<IActionResult> GetAsync([FromQuery] GetCondutoresQuery query)
         {
             var result = await Mediator.Send(query);
 

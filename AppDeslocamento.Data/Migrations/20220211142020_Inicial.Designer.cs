@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppDeslocamento.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220209223840_Inicial")]
+    [Migration("20220211142020_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,15 +34,19 @@ namespace AppDeslocamento.Data.Migrations
 
                     b.Property<string>("cpf")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)")
+                        .HasColumnName("cpf");
 
                     b.Property<string>("nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("nome");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Clientes");
+                    b.ToTable("clientes", (string)null);
                 });
 
             modelBuilder.Entity("AppDeslocamento.Domain.Entities.Condutor", b =>
@@ -55,15 +59,19 @@ namespace AppDeslocamento.Data.Migrations
 
                     b.Property<string>("email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("email");
 
                     b.Property<string>("nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("nome");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Condutores");
+                    b.ToTable("condutores", (string)null);
                 });
 
             modelBuilder.Entity("AppDeslocamento.Domain.Entities.Deslocamento", b =>
@@ -81,20 +89,26 @@ namespace AppDeslocamento.Data.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<DateTime>("dataHoraFim")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime")
+                        .HasColumnName("dataHoraFim");
 
                     b.Property<DateTime>("dataHoraInicio")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime")
+                        .HasColumnName("dataHoraInicio");
 
                     b.Property<long>("kmFim")
-                        .HasColumnType("bigint");
+                        .HasColumnType("bigint")
+                        .HasColumnName("kmFim");
 
                     b.Property<long>("kmInicio")
-                        .HasColumnType("bigint");
+                        .HasColumnType("bigint")
+                        .HasColumnName("kmInicio");
 
                     b.Property<string>("observacao")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)")
+                        .HasColumnName("observacao");
 
                     b.Property<long>("veiculoId")
                         .HasColumnType("bigint");
@@ -107,7 +121,7 @@ namespace AppDeslocamento.Data.Migrations
 
                     b.HasIndex("veiculoId");
 
-                    b.ToTable("Deslocamentos");
+                    b.ToTable("deslocamentos", (string)null);
                 });
 
             modelBuilder.Entity("AppDeslocamento.Domain.Entities.Veiculo", b =>
@@ -120,15 +134,19 @@ namespace AppDeslocamento.Data.Migrations
 
                     b.Property<string>("descricao")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)")
+                        .HasColumnName("descricao");
 
                     b.Property<string>("placa")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("placa");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Veiculos");
+                    b.ToTable("veiculos", (string)null);
                 });
 
             modelBuilder.Entity("AppDeslocamento.Domain.Entities.Deslocamento", b =>
@@ -137,19 +155,22 @@ namespace AppDeslocamento.Data.Migrations
                         .WithMany("Deslocamentos")
                         .HasForeignKey("clienteId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK_Cliente_Deslocamentos_clienteId");
 
                     b.HasOne("AppDeslocamento.Domain.Entities.Condutor", "Condutor")
                         .WithMany("Deslocamentos")
                         .HasForeignKey("condutorId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK_Condutor_Deslocamentos_condutorId");
 
                     b.HasOne("AppDeslocamento.Domain.Entities.Veiculo", "Veiculo")
                         .WithMany("Deslocamentos")
                         .HasForeignKey("veiculoId")
                         .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK_Veiculo_Deslocamentos_veiculoId");
 
                     b.Navigation("Cliente");
 

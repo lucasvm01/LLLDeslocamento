@@ -10,8 +10,8 @@ namespace AppDeslocamento.Domain.Entities
     {
         public Veiculo(string placa, string descricao)
         {
-            placa = placa;
-            descricao = descricao;
+            this.placa = placa;
+            this.descricao = descricao;
         }
         public Veiculo()
         {

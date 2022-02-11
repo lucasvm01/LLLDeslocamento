@@ -10,8 +10,8 @@ namespace AppDeslocamento.Domain.Entities
     {
         public Condutor(string nome, string emai)
         {
-            nome = nome;
-            emai = emai;
+            this.nome = nome;
+            this.email = emai;
         }
 
         public Condutor()

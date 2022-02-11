@@ -7,7 +7,7 @@ namespace AppDeslocamento.WebAPI.Controllers
     public class VeiculosController : ApiController
     {
         [HttpGet]
-        public async Task<IActionResult> GetAsync([FromQuery] GetVeiculoQuery query)
+        public async Task<IActionResult> GetAsync([FromQuery] GetVeiculosQuery query)
         {
             var result = await Mediator.Send(query);
 

@@ -10,49 +10,49 @@ namespace AppDeslocamento.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Clientes",
+                name: "clientes",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    cpf = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    cpf = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
+                    nome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Clientes", x => x.Id);
+                    table.PrimaryKey("PK_clientes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Condutores",
+                name: "condutores",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    email = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    nome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Condutores", x => x.Id);
+                    table.PrimaryKey("PK_condutores", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Veiculos",
+                name: "veiculos",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    placa = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    descricao = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    placa = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    descricao = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Veiculos", x => x.Id);
+                    table.PrimaryKey("PK_veiculos", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Deslocamentos",
+                name: "deslocamentos",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
@@ -60,64 +60,64 @@ namespace AppDeslocamento.Data.Migrations
                     clienteId = table.Column<long>(type: "bigint", nullable: false),
                     condutorId = table.Column<long>(type: "bigint", nullable: false),
                     veiculoId = table.Column<long>(type: "bigint", nullable: false),
-                    dataHoraInicio = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    dataHoraFim = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    dataHoraInicio = table.Column<DateTime>(type: "datetime", nullable: false),
+                    dataHoraFim = table.Column<DateTime>(type: "datetime", nullable: false),
                     kmInicio = table.Column<long>(type: "bigint", nullable: false),
                     kmFim = table.Column<long>(type: "bigint", nullable: false),
-                    observacao = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    observacao = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Deslocamentos", x => x.Id);
+                    table.PrimaryKey("PK_deslocamentos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Deslocamentos_Clientes_clienteId",
+                        name: "FK_Cliente_Deslocamentos_clienteId",
                         column: x => x.clienteId,
-                        principalTable: "Clientes",
+                        principalTable: "clientes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Deslocamentos_Condutores_condutorId",
+                        name: "FK_Condutor_Deslocamentos_condutorId",
                         column: x => x.condutorId,
-                        principalTable: "Condutores",
+                        principalTable: "condutores",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Deslocamentos_Veiculos_veiculoId",
+                        name: "FK_Veiculo_Deslocamentos_veiculoId",
                         column: x => x.veiculoId,
-                        principalTable: "Veiculos",
+                        principalTable: "veiculos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Deslocamentos_clienteId",
-                table: "Deslocamentos",
+                name: "IX_deslocamentos_clienteId",
+                table: "deslocamentos",
                 column: "clienteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Deslocamentos_condutorId",
-                table: "Deslocamentos",
+                name: "IX_deslocamentos_condutorId",
+                table: "deslocamentos",
                 column: "condutorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Deslocamentos_veiculoId",
-                table: "Deslocamentos",
+                name: "IX_deslocamentos_veiculoId",
+                table: "deslocamentos",
                 column: "veiculoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Deslocamentos");
+                name: "deslocamentos");
 
             migrationBuilder.DropTable(
-                name: "Clientes");
+                name: "clientes");
 
             migrationBuilder.DropTable(
-                name: "Condutores");
+                name: "condutores");
 
             migrationBuilder.DropTable(
-                name: "Veiculos");
+                name: "veiculos");
         }
     }
 }
