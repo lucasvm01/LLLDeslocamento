@@ -14,12 +14,12 @@ Migrations:
 
 First use:
 
-	- dotnet tool install --global dotnet-ef
+	dotnet tool install --global dotnet-ef
 
 Criar migrations:
 
-	- dotnet ef migrations add <nome para migration> --project .\AppDeslocamento.Data --startup-project .\AppDeslocamento.WebAPI --context AppDbContext
+	dotnet ef migrations add <nome para migration> --project .\AppDeslocamento.Data --startup-project .\AppDeslocamento.WebAPI --context AppDbContext
 
 Executar e atualizar migrations:
 
-	- dotnet ef database update --project .\AppDeslocamento.Data --startup-project .\AppDeslocamento.WebAPI --context AppDbContext
+	dotnet ef database update --project .\AppDeslocamento.Data --startup-project .\AppDeslocamento.WebAPI --context AppDbContext
