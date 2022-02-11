@@ -8,9 +8,13 @@ namespace AppDeslocamento.Domain.Entities
 {
     public class Deslocamento : BaseEntity
     {
-        public Deslocamento(long clienteId, long condutorId, long veiculoId)
+        public Deslocamento(long clienteId, long condutorId, long veiculoId, DateTime dataHoraInicio, long kmInicio)
         {
-
+            this.clienteId = clienteId;
+            this.condutorId = condutorId;
+            this.veiculoId = veiculoId;
+            this.dataHoraInicio = dataHoraInicio;
+            this.kmInicio = kmInicio;
         }
         public Deslocamento()
         {

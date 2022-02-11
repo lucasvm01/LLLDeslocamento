@@ -8,10 +8,10 @@ namespace AppDeslocamento.Domain.Entities
 {
     public class Cliente : BaseEntity
     {
-        public Cliente(string cpf, string nome)
+        public Cliente  (string nome, string cpf )
         {
-            cpf = cpf;
-            nome = nome;
+            this.cpf = cpf;
+            this.nome = nome;
         }
 
         public Cliente(){

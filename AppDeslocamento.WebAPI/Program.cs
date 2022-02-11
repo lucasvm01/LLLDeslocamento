@@ -29,7 +29,9 @@ namespace AppDeslocamento.WebAPI
 
             builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
-            var appAssembly = typeof(AppDeslocamento.Application.Clientes.CadastrarClienteCommand).Assembly;
+            var appAssembly = typeof(
+                Application.Clientes.CadastrarClienteCommand)
+                .Assembly;
              
             builder.Services.AddMediatR(appAssembly);
 

@@ -15,6 +15,11 @@ namespace AppDeslocamento.Data.Repository
 
         private Dictionary<Type, object> _repositories;
 
+        public UnitOfWork(AppDbContext applicationDbContext)
+        {
+            _applicationDbContext = applicationDbContext;
+        }
+
         public async Task<int> CommitAsync()
         {
             var result = await _applicationDbContext.SaveChangesAsync();
@@ -31,10 +36,10 @@ namespace AppDeslocamento.Data.Repository
         {
             _repositories ??= new Dictionary<Type, object>();
 
-            //if(_repositories == null)
-            //{
-            //    _repositories = new Dictionary<Type, object>();
-            //}
+            if (_repositories == null)
+            {
+                _repositories = new Dictionary<Type, object>();
+            }
 
             var type = typeof(TEntity);
 

@@ -15,7 +15,7 @@ namespace AppDeslocamento.WebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{clienteId:long}")]
+        [HttpGet("query")]
         public async Task<IActionResult> GetAsync([FromQuery] GetClienteQuery query)
         {
             var result = await Mediator.Send(query);

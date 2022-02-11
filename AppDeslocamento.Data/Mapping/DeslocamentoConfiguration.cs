@@ -41,12 +41,10 @@ namespace AppDeslocamento.Data.Mapping
                 .HasMaxLength(300);
 
             builder.Property(p => p.dataHoraFim)
-                .IsRequired()
                 .HasColumnName("data_hora_fim")
                 .HasColumnType("datetime");
 
             builder.Property(p => p.kmFim)
-                .IsRequired()
                 .HasColumnName("km_fim");
         }
     }
