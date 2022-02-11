@@ -15,6 +15,8 @@ namespace AppDeslocamento.Domain.Entities
             this.veiculoId = veiculoId;
             this.dataHoraInicio = dataHoraInicio;
             this.kmInicio = kmInicio;
+            this.observacao = "";
+            this.kmFim = 0;
         }
         public Deslocamento()
         {
@@ -33,7 +35,7 @@ namespace AppDeslocamento.Domain.Entities
         public long veiculoId { get; set; }
 
         public DateTime dataHoraInicio { get; set; }
-        public DateTime dataHoraFim { get; set; }
+        public DateTime? dataHoraFim { get; set; }
         public long kmInicio { get; set; }
         public long kmFim { get; set; }
         public string observacao { get; set; }

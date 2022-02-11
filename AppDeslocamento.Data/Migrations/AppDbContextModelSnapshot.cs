@@ -86,7 +86,7 @@ namespace AppDeslocamento.Data.Migrations
                     b.Property<long>("condutorId")
                         .HasColumnType("bigint");
 
-                    b.Property<DateTime>("dataHoraFim")
+                    b.Property<DateTime?>("dataHoraFim")
                         .HasColumnType("datetime")
                         .HasColumnName("dataHoraFim");
 
@@ -95,7 +95,9 @@ namespace AppDeslocamento.Data.Migrations
                         .HasColumnName("dataHoraInicio");
 
                     b.Property<long>("kmFim")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
+                        .HasDefaultValue(0L)
                         .HasColumnName("kmFim");
 
                     b.Property<long>("kmInicio")
@@ -103,6 +105,7 @@ namespace AppDeslocamento.Data.Migrations
                         .HasColumnName("kmInicio");
 
                     b.Property<string>("observacao")
+                        .IsRequired()
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)")
                         .HasColumnName("observacao");

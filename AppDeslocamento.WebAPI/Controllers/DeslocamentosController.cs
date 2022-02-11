@@ -31,15 +31,15 @@ namespace AppDeslocamento.WebAPI.Controllers
             return Created($"id={result.Id}", result);
         }
 
-        //[HttpPut("FinalizarDeslocamento/{deslocamentoId:long}")]
-        //public async Task<IActionResult> PutFinalizarAsync([FromRoute] long deslocamentoId,
-        //                                            [FromBody] FinalizarDeslocamentoCommand command)
-        //{
-        //    if (deslocamentoId != command.deslocamentoId) return BadRequest();
+        [HttpPut("FinalizarDeslocamento/{deslocamentoId:long}")]
+        public async Task<IActionResult> PutFinalizarAsync([FromRoute] long deslocamentoId,
+                                                    [FromBody] FinalizarDeslocamentoCommand command)
+        {
+            if (deslocamentoId != command.deslocamentoId) return BadRequest();
 
-        //    var result = await Mediator.Send(command);
+            var result = await Mediator.Send(command);
 
-        //    return Ok(result);
-        //}
+            return Ok(result);
+        }
     }
 }

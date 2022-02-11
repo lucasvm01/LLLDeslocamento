@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AppDeslocamento.Data.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Fix : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -61,9 +61,9 @@ namespace AppDeslocamento.Data.Migrations
                     condutorId = table.Column<long>(type: "bigint", nullable: false),
                     veiculoId = table.Column<long>(type: "bigint", nullable: false),
                     dataHoraInicio = table.Column<DateTime>(type: "datetime", nullable: false),
-                    dataHoraFim = table.Column<DateTime>(type: "datetime", nullable: false),
+                    dataHoraFim = table.Column<DateTime>(type: "datetime", nullable: true),
                     kmInicio = table.Column<long>(type: "bigint", nullable: false),
-                    kmFim = table.Column<long>(type: "bigint", nullable: false),
+                    kmFim = table.Column<long>(type: "bigint", nullable: false, defaultValue: 0L),
                     observacao = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false)
                 },
                 constraints: table =>

@@ -37,17 +37,15 @@ namespace AppDeslocamento.Data.Mapping
                 .HasColumnName("kmInicio");
 
             builder.Property(p => p.observacao)
-                        .HasDefaultValue(null)
                 .HasColumnName("observacao")
                 .HasMaxLength(300);
 
             builder.Property(p => p.dataHoraFim)
-                .HasDefaultValue(null)
                 .HasColumnName("dataHoraFim")
                 .HasColumnType("datetime");
 
             builder.Property(p => p.kmFim)
-                .HasDefaultValue(null)
+                .HasDefaultValue(0)
                 .HasColumnName("kmFim");
         }
     }
