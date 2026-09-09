@@ -1,7 +1,10 @@
 # LLLDeslocamento
-AppDeslocamento
 
+API para controle de frota de veículos e seus deslocamentos.
 
+Desenvolvido para a disciplina de introdução ao back-end - Biopark Connect.
+
+## Como usar?
 Usar bando de dados no SQL Manager:
 	"AppDbContext": "Server=localhost;Database=llldeslocamento;Trusted_Connection=False;"
 
